@@ -1,13 +1,27 @@
-import logo from './logo.svg';
+import Homepage from './pages/Homepage.component';
 import './App.css';
 
-import Homepage from './pages/Homepage.component'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+const HatsPage = () => (
+  <div>
+    <h1>HatsPage.toUpperCase()</h1>
+  </div>
+)
 
 function App() {
   return (
     <div >
+<BrowserRouter>
+<Routes>
 
-      <Homepage />
+  <Route exact path='/' Component={Homepage} />
+
+  <Route exact path='/HatsPage' Component={HatsPage} />
+</Routes>
+</BrowserRouter>
+
+
   
     </div>
   );
